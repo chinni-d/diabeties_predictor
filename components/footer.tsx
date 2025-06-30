@@ -108,7 +108,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-white">Contact Us</h3>
+            <h3 className="text-xl font-bold text-white">Contact Me</h3>
             <div className="flex space-x-4">
               <a
                 href="mailto:darapureddymanikanta8@gmail.com"
@@ -147,8 +147,13 @@ export function Footer() {
       <div className="border-t border-slate-700">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-slate-400 text-sm">
-              © {new Date().getFullYear()} DiabetesAI. All rights reserved. | Powered by Advanced AI Technology
+            <div className="w-full flex flex-col md:flex-row md:justify-between md:items-center">
+              <div className="text-slate-400 text-sm text-center md:text-left mb-2 md:mb-0">
+              © {new Date().getFullYear()} DiabetesAI. All rights reserved.
+              </div>
+              <div className="text-slate-400 text-sm text-center md:text-right">
+              Built with 💛 using Next.js and AI technology
+              </div>
             </div>
           </div>
         </div>

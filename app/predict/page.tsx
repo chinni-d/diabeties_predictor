@@ -115,11 +115,11 @@ export default function PredictPage() {
                 <Brain className="w-12 h-12 text-blue-600" />
                 <div className="absolute inset-0 w-12 h-12 bg-blue-600 rounded-full blur-lg opacity-20 animate-pulse" />
               </div>
-              <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                 AI Health Assessment
               </h1>
             </div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Provide accurate health information for the most reliable AI-powered diabetes risk prediction. All data is
               encrypted and processed securely.
             </p>
@@ -134,21 +134,7 @@ export default function PredictPage() {
             </div>
           </div>
 
-           {/* Stats Section */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-md">
-              <Shield className="w-5 h-5 text-green-600" />
-              <span className="text-sm font-medium text-slate-700">HIPAA Compliant</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-md">
-              <Heart className="w-5 h-5 text-red-500" />
-              <span className="text-sm font-medium text-slate-700">Medically Validated</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-md">
-              <Brain className="w-5 h-5 text-blue-600" />
-              <span className="text-sm font-medium text-slate-700">AI-Powered</span>
-            </div>
-          </div>
+         
 
           {/* Form Card */}
           <Card className="border-0 shadow-2xl bg-white/80 backdrop-blur-sm">
@@ -346,10 +332,10 @@ export default function PredictPage() {
                         Analyzing Your Health Data...
                       </>
                     ) : (
-                      <>
-                        <Brain className="w-6 h-6 mr-3" />
-                        Get AI-Powered Risk Assessment
-                      </>
+                        <>
+                        <Brain className="w-5 h-5 mr-2 md:w-6 md:h-6 md:mr-3" />
+                        <span className="text-base md:text-xl">Get AI-Powered Risk Assessment</span>
+                        </>
                     )}
                   </Button>
 
