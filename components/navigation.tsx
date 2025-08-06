@@ -43,7 +43,7 @@ export function Navigation() {
 								<div className="flex items-center space-x-3 mb-8">
 									<Heart className="h-8 w-8 text-blue-600" />
 									<div>
-										<span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+										<span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
 											DiabetesAI
 										</span>
 									</div>
@@ -58,7 +58,7 @@ export function Navigation() {
 												href={item.href}
 												onClick={() => setIsOpen(false)}
 												className={cn(
-													"flex items-center space-x-3 px-4 py-4 rounded-xl text-sm font-medium transition-all duration-300",
+													"flex items-center space-x-3 px-4 py-4 rounded-xl text-xs font-medium transition-all duration-300",
 													isActive
 														? "bg-blue-600 text-white shadow-md" // Changed active status color and shadow
 														: "text-blue-700 hover:bg-blue-100 hover:text-blue-900",
@@ -78,7 +78,7 @@ export function Navigation() {
 									<Heart className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
 									<Sparkles className="h-3 w-3 text-blue-400 absolute -top-1 -right-1 animate-pulse" />
 								</div>
-								<span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+								<span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
 									DiabetesAI
 								</span>
 							</Link>
@@ -109,7 +109,7 @@ export function Navigation() {
 							<Sparkles className="h-4 w-4 text-blue-400 absolute -top-1 -right-1 animate-pulse" />
 						</div>
 						<div>
-							<span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+							<span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
 								DiabetesAI
 							</span>
 						</div>
@@ -124,7 +124,7 @@ export function Navigation() {
 									key={item.name}
 									href={item.href}
 									className={cn(
-										"flex items-center space-x-2 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 relative group",
+										"flex items-center space-x-2 px-4 py-3 rounded-xl text-xs font-medium transition-all duration-200 relative group",
 										isActive
 											? "bg-blue-100 text-blue-900"
 											: "text-blue-700 hover:bg-blue-50 hover:text-blue-900",
