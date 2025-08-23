@@ -175,12 +175,12 @@ export default function HomePage() {
         </div>
 
         {/* Benefits Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-20">
+          <div className="order-2 lg:order-1">
             <Badge className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Why Choose DiabetesAI?
             </Badge>
-            <h2 className="text-3xl font-bold text-slate-800 mb-8 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6 md:mb-8 leading-tight">
               Advanced Healthcare Technology at Your Fingertips
             </h2>
             <div className="space-y-6">
@@ -236,46 +236,46 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl shadow-2xl p-10 text-white">
-            <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Activity className="w-10 h-10 text-white" />
+          <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-10 text-white order-1 lg:order-2">
+            <div className="text-center mb-6 md:mb-8">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6">
+                <Activity className="w-8 h-8 md:w-10 md:h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="text-base text-blue-100 leading-relaxed mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Ready to Get Started?</h3>
+              <p className="text-sm md:text-base text-blue-100 leading-relaxed mb-6 md:mb-8 px-2">
                 Take the first step towards better health management. Our comprehensive AI assessment takes just 3
                 minutes and provides valuable insights into your diabetes risk.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 text-blue-100">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+            <div className="space-y-3 md:space-y-4">
+              <div className="flex items-center gap-3 text-blue-100 text-sm md:text-base">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 flex-shrink-0" />
                 <span>Free comprehensive assessment</span>
               </div>
-              <div className="flex items-center gap-3 text-blue-100">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="flex items-center gap-3 text-blue-100 text-sm md:text-base">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 flex-shrink-0" />
                 <span>Instant detailed results</span>
               </div>
-              <div className="flex items-center gap-3 text-blue-100">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="flex items-center gap-3 text-blue-100 text-sm md:text-base">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 flex-shrink-0" />
                 <span>Personalized recommendations</span>
               </div>
-              <div className="flex items-center gap-3 text-blue-100">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="flex items-center gap-3 text-blue-100 text-sm md:text-base">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 flex-shrink-0" />
                 <span>Downloadable health report</span>
               </div>
             </div>
 
             <Button
               asChild
-              className="group w-full mt-8 bg-white text-blue-600 hover:bg-blue-50 font-semibold py-4 rounded-xl shadow-lg"
+              className="group w-full mt-6 md:mt-8 bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 md:py-4 rounded-xl shadow-lg text-sm md:text-base"
             >
               <Link href="/predict" className="flex items-center justify-center">
-                <Activity className="w-5 h-5 mr-3" />
+                <Activity className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
                 Start Your Free Assessment Now
                 <span aria-hidden="true" className="ml-2 flex items-center transition-transform duration-200 group-hover:translate-x-1">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </span>
               </Link>
             </Button>
