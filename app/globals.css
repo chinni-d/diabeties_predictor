@@ -116,7 +116,6 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #2563eb, #1e40af);
     box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
-    transform: scale(1.1);
   }
 
   ::-webkit-scrollbar-corner {
@@ -170,5 +169,61 @@ body {
 
   .dark * {
     scrollbar-color: #60a5fa transparent;
+  }
+}
+
+/* Mobile Navigation Fixes */
+@layer components {
+  /* Ensure mobile nav items are always visible */
+  @media (max-width: 768px) {
+    .mobile-nav-container {
+      min-width: 320px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+    .mobile-nav-menu {
+      flex-shrink: 0;
+      width: 40px;
+    }
+
+    .mobile-nav-logo {
+      flex: 1;
+      min-width: 0;
+      max-width: calc(100vw - 120px);
+      display: flex;
+      justify-content: center;
+    }
+
+    .mobile-nav-signin {
+      flex-shrink: 0;
+      min-width: 60px;
+      width: auto;
+    }
+
+    .mobile-nav-signin button {
+      font-size: 11px !important;
+      padding: 4px 8px !important;
+      height: 28px !important;
+      min-width: 55px !important;
+      white-space: nowrap !important;
+    }
+  }
+
+  /* Extra small devices */
+  @media (max-width: 320px) {
+    .mobile-nav-logo span {
+      font-size: 12px !important;
+    }
+
+    .mobile-nav-signin button {
+      font-size: 10px !important;
+      padding: 2px 6px !important;
+      height: 24px !important;
+      min-width: 50px !important;
+    }
   }
 }
