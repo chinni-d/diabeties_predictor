@@ -50,7 +50,7 @@ export default function PredictPage() {
   setError("");
 
   try {
-    const response = await fetch("https://predictapi.dmanikanta.site/predict", {
+    const response = await fetch("https://predictapi.manikantadarapureddy.in/predict", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
