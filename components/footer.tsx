@@ -11,6 +11,7 @@ import {
   Phone,
   MapPin,
   MessageCircle,
+  Briefcase,
 } from "lucide-react"
 
 export function Footer() {
@@ -125,7 +126,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://dmanikanta.site" target="_blank" rel="noopener noreferrer"
+                href="https://www.manikantadarapureddy.in" target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 hover:bg-blue-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Portfolio"
               >
@@ -137,6 +138,13 @@ export function Footer() {
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
+              </a>
+              <a
+                href="https://services.manikantadarapureddy.in" target="_blank" rel="noopener noreferrer"
+                className="w-10 h-10 bg-blue-600 hover:bg-blue-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Services"
+              >
+                <Briefcase className="w-5 h-5" />
               </a>
             </div>
           </div>
