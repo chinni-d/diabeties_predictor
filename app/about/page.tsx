@@ -223,7 +223,7 @@ export default function AboutPage() {
 
                   {/* Portfolio */}
                   <a
-                    href="https://dmanikanta.site"
+                    href="https://www.manikantadarapureddy.in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-white hover:bg-gray-50 border border-gray-200 hover:border-purple-300 rounded-lg flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"

@@ -9,7 +9,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DiabetesAI",
+  title: "DiabetesAI | Risk Predictor",
   description:
     "Advanced AI-powered diabetes risk assessment and prediction tool with personalized health insights",
   icons: {

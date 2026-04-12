@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-import { Heart, Menu, Home, Activity, History, Info, Sparkles, LogIn } from "lucide-react"
+import { Heart, Home, Activity, History, Info, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { SignedOut, SignInButton } from "@clerk/nextjs"
+import { SignedOut, useAuth, SignInButton } from "@clerk/nextjs"
 import { SignedIn, UserButton } from "@clerk/clerk-react"
 
 const navigation = [
@@ -20,6 +20,14 @@ const navigation = [
 export function Navigation() {
 	const pathname = usePathname()
 	const [isOpen, setIsOpen] = useState(false)
+	const { isSignedIn } = useAuth()
+
+	const navItems = navigation.map((item) => {
+		if (item.name === "Predict" && !isSignedIn) {
+			return { ...item, href: "/sign-in" }
+		}
+		return item
+	})
 
 	return (
 		<header className="sticky top-0 z-50 w-full border-b border-blue-200/50 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80 shadow-sm">
@@ -35,7 +43,22 @@ export function Navigation() {
 									size="icon"
 									className="text-blue-700 hover:bg-blue-50 hover:text-blue-900 rounded-xl transition-all duration-300"
 								>
-									<Menu className="h-6 w-6" />
+									<svg 
+										xmlns="http://www.w3.org/2000/svg" 
+										viewBox="0 0 24 24" 
+										fill="none" 
+										stroke="currentColor" 
+										strokeWidth="1.5" 
+										strokeLinecap="round" 
+										strokeLinejoin="round" 
+										className="transition-transform active:scale-95"
+										style={{ width: '28px', height: '28px', display: 'block' }}
+									>
+										<line x1="3" y1="7" x2="10" y2="7" />
+										<line x1="3" y1="12" x2="14" y2="12" />
+										<line x1="3" y1="17" x2="18" y2="17" />
+										<path d="M18.5 4.5c-.7 0-1.3.3-1.8.8-.5-.5-1.1-.8-1.8-.8-1.3 0-2.2.9-2.2 2.2 0 1.3 1.3 2.5 2.2 3.1l1.8 1.8 1.8-1.8c.9-.6 2.2-1.8 2.2-3.1 0-1.3-.9-2.2-2.2-2.2z" fill="currentColor" stroke="none" />
+									</svg>
 								</Button>
 							</SheetTrigger>
 							<SheetContent side="left" className="w-60 bg-gradient-to-b from-white to-blue-50"> {/* Reduced width to w-72 */}
@@ -49,7 +72,7 @@ export function Navigation() {
 									</div>
 								</div>
 								<nav className="flex flex-col space-y-3">
-									{navigation.map((item) => {
+									{navItems.map((item) => {
 										const Icon = item.icon
 										const isActive = pathname === item.href
 										return (
@@ -89,10 +112,9 @@ export function Navigation() {
 							
 							<SignedOut>
 								<SignInButton mode="modal">
-									<Button variant="outline" size="sm" className="flex items-center">
-								<span>Sign In</span> {/* Text only, removed responsive classes for icon */}
-							</Button>
-
+									<Button variant="outline" size="sm">
+										Sign In
+									</Button>
 								</SignInButton>
 							</SignedOut>
 							<SignedIn>
@@ -114,9 +136,8 @@ export function Navigation() {
 							</span>
 						</div>
 					</Link>
-					{/* Desktop Nav - remove w-full, justify-center. Add mx-auto to keep it centered if space allows */}
 					<nav className="hidden md:flex items-center space-x-2 mx-auto">
-						{navigation.map((item) => {
+						{navItems.map((item) => {
 							const Icon = item.icon
 							const isActive = pathname === item.href
 							return (
@@ -141,7 +162,7 @@ export function Navigation() {
 						<SignedOut>
 							<SignInButton mode="modal">
 								<Button variant="outline" size="sm" className="ml-4">
-									<LogIn className="mr-2 h-4 w-4" /> Sign In
+									Sign In
 								</Button>
 							</SignInButton>
 						</SignedOut>
